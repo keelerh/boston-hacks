@@ -16,13 +16,12 @@
 
     <!-- Custom CSS -->
     <link href="css/heroic-features.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <link href="jquery.range.css" rel="stylesheet">
+
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 </head>
 
@@ -64,11 +63,31 @@
     <div class="container">
 
         <!-- Jumbotron Header -->
-        <header class="jumbotron hero-spacer">
-            <h1>A Warm Welcome!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-            <p><a class="btn btn-primary btn-large">Call to action!</a>
-            </p>
+        <header class="hero-spacer">
+            <h3>Put your coding skills to use on your own time.</h3>
+
+            <div class="spacer"></div>
+
+            <button class="active btn btn-primary" id="all">Show All</button>
+            <button class="btn btn-primary" id="java">Java</button>
+            <button class="btn btn-primary" id="c">C</button>
+            <button class="btn btn-primary" id="c++">C++</button>
+            <button class="btn btn-primary" id="c#">C#</button>
+            <button class="btn btn-primary" id="python">Python</button>
+            <button class="btn btn-primary" id="php">PHP</button>
+            <button class="btn btn-primary" id="js">JavaScript</button>
+            <button class="btn btn-primary" id="perl">Perl</button>
+            <button class="btn btn-primary" id="ruby">Ruby</button>
+            <button class="btn btn-primary" id="swift">Swift</button>
+            <button class="btn btn-primary" id="r">R</button>
+            <button class="btn btn-primary" id="go">Go</button>
+            <button class="btn btn-primary" id="asssembly">Assembly language</button>
+            <button class="btn btn-primary" id="obj-c">Objective-C</button>
+
+            <div class="spacer"></div>
+
+            <input class="range-slider" type="hidden" value="25,75">
+
         </header>
 
         <hr>
@@ -82,9 +101,9 @@
         <!-- /.row -->
 
         <!-- Page Features -->
-        <div class="row text-center">
+        <div class="row text-center" id="parent">
 
-            <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="col-md-3 col-sm-6 hero-feature tile python">
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
@@ -97,7 +116,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="col-md-3 col-sm-6 hero-feature tile js">
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
@@ -110,7 +129,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="col-md-3 col-sm-6 hero-feature tile assembly">
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
@@ -123,7 +142,7 @@
                 </div>
             </div>
 
-            <div class="col-md-3 col-sm-6 hero-feature">
+            <div class="col-md-3 col-sm-6 hero-feature tile js">
                 <div class="thumbnail">
                     <img src="http://placehold.it/800x500" alt="">
                     <div class="caption">
@@ -145,7 +164,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; Made with &#9829; by Keeley & Tamar 2017</p>
                 </div>
             </div>
         </footer>
@@ -158,6 +177,11 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+
+    <script src="jquery.range-min.js"></script>
 
 </body>
 
