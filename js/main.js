@@ -20,9 +20,12 @@ $('.range-slider').jRange({
     isRange : true
 });
 
-function bugPage() {
-  window.location.href = "bugPage.html";
-};
+function getRelativeHref(href) {
+  var currentLocation = window.location.href;
+  var prefixArray = currentLocation.split('/');
+  var prefixArray = prefixArray.slice(0, prefixArray.length - 1);
+  return prefixArray.join('/') + href;
+}
 
 function populateTiles() {
   var row = $('#tileRow');
@@ -38,7 +41,7 @@ function populateTiles() {
     var language = $('<h5>', {"margin-bottom": "10px", "margin-top": "0px"}).text("Language: "+bug.language);
     var twitterDesc = $('<p>').text(bug.twitterDesc);
     var p = $('<p>');
-    var bugBtn = $('<a>', {"class": "btn btn-primary", "onclick": "bugPage()", href:"#"}).text("See More");
+    var bugBtn = $('<a>', {"class": "btn btn-primary", href: getRelativeHref("/bugPage.html?bug=" + bug.href)}).text("See More");
     p.append(bugBtn);
     caption.append(title).append(compensation).append(language).append(twitterDesc).append(p);
     thumbnail.append(caption);

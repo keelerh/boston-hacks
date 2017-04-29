@@ -9,7 +9,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Blog Post - Start Bootstrap Template</title>
+    <br>
+    <br>
+    <title>Bug Page</title>
+
+    <script src="js/bugs.js"></script>
 
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -71,17 +75,17 @@
                 <!-- Blog Post -->
 
                 <!-- Title -->
-                <h1>Blog Post Title</h1>
+                <h1 id="title"></h1>
 
                 <!-- Author -->
                 <p class="lead">
-                    by <a href="#">Start Bootstrap</a>
+                    by <a id="name"></a>
                 </p>
 
                 <hr>
 
                 <!-- Date/Time -->
-                <p><span class="glyphicon glyphicon-time"></span> Posted on August 24, 2013 at 9:00 PM</p>
+                <p id="datePosted"><span class="glyphicon glyphicon-time"></span></p>
 
                 <hr>
 
@@ -235,8 +239,43 @@
     <!-- jQuery -->
     <script src="js/jquery.js"></script>
 
+    <script>
+
+    function populateInfo(bug) {
+      var title = $('#title');
+      title.text(bug.title);
+
+      var name = $('#name');
+      name.text(bug.username);
+
+      var date = $('#datePosted');
+      date.text("Posted on "+bug.datePosted);
+    }
+
+    $(document).ready(function()
+    {
+      $.urlParam = function (name) {
+        var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
+        return results[1] || 0;
+      }
+
+      var bug = $.urlParam('bug');
+      var bugObj;
+      for (var i=0; i<bugs.length; i++) {
+        if (bugs[i].href == bug) {
+          bugObj = bugs[i];
+          break;
+        }
+      }
+
+      populateInfo(bugObj);
+
+    });
+    </script>
+
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
 
 </body>
 
