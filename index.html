@@ -16,15 +16,13 @@
 
     <!-- Custom CSS -->
     <link href="css/heroic-features.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
     <script src="bugs.js"></script>
+    <link href="jquery.range.css" rel="stylesheet">
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <script src="http://code.jquery.com/jquery-1.10.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
 
 </head>
 
@@ -66,11 +64,31 @@
     <div class="container">
 
         <!-- Jumbotron Header -->
-        <header class="jumbotron hero-spacer">
-            <h1>A Warm Welcome!</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa, ipsam, eligendi, in quo sunt possimus non incidunt odit vero aliquid similique quaerat nam nobis illo aspernatur vitae fugiat numquam repellat.</p>
-            <p><a class="btn btn-primary btn-large">Call to action!</a>
-            </p>
+        <header class="hero-spacer">
+            <h3>Put your coding skills to use on your own time.</h3>
+
+            <div class="spacer"></div>
+
+            <button class="active btn btn-primary" id="all">Show All</button>
+            <button class="btn btn-primary" id="Java">Java</button>
+            <button class="btn btn-primary" id="C">C</button>
+            <button class="btn btn-primary" id="C++">C++</button>
+            <button class="btn btn-primary" id="C#">C#</button>
+            <button class="btn btn-primary" id="Python">Python</button>
+            <button class="btn btn-primary" id="PHP">PHP</button>
+            <button class="btn btn-primary" id="JavaScript">JavaScript</button>
+            <button class="btn btn-primary" id="Perl">Perl</button>
+            <button class="btn btn-primary" id="Ruby">Ruby</button>
+            <button class="btn btn-primary" id="Swift">Swift</button>
+            <button class="btn btn-primary" id="R">R</button>
+            <button class="btn btn-primary" id="Go">Go</button>
+            <button class="btn btn-primary" id="Asssembly">Assembly language</button>
+            <button class="btn btn-primary" id="Objective-C">Objective-C</button>
+
+            <div class="spacer"></div>
+
+            <input class="range-slider" type="hidden" value="25,75">
+
         </header>
 
         <hr>
@@ -95,7 +113,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>Copyright &copy; Made with &#9829; by Keeley & Tamar 2017</p>
                 </div>
             </div>
         </footer>
@@ -115,13 +133,9 @@
 
       function populateTiles() {
         var row = $('#tileRow');
-        console.log(row);
-        console.log(bugs.length);
         for (var i=0; i<bugs.length; i++) {
-          console.log(i);
           var bug = bugs[i];
-          console.log(bug);
-          var outerDiv = $('<div>', {"class":"col-md-3 col-sm-6 hero-feature"});
+          var outerDiv = $('<div>', {"class":"col-md-3 col-sm-6 hero-feature " + bug.language});
           var thumbnail = $('<div>', {"class": "thumbnail"});
           var img = $('<img>', {"src": "http://placehold.it/800x500"});
           thumbnail.append(img);
@@ -149,6 +163,11 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Custom JavaScript -->
+    <script src="js/main.js"></script>
+
+    <script src="jquery.range-min.js"></script>
 
 </body>
 

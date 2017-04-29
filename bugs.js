@@ -2,7 +2,7 @@
 //bug = {username: "", title: "", compensation: "", language: "", twitterDesc: "", fullDesc: "", code: ""};
 
 twilioBug = {username: "Tamar Weseley", title: "Twilio Help!", compensation: "500",
-  language: "Javascript",
+  language: "JavaScript",
   twitterDesc: "Issue when using Twilio API - can't get text messages to go through.",
   fullDesc: "MEEP MEEP MEEP",
   code: "this is my code"
