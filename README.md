@@ -1,4 +1,4 @@
-# [GreenHatHackers](http://greenhat-hackers.net/) 
+# GreenHatHackers
 
 ## Inspiration
 The rising "gig" economy is encouraging an increasing number of individuals to work for themselves in a more flexible manner. Remote developer jobs are one of the fastest growing areas of such work, yet the vast majority of such offerings are limited to mid-long term project. Projects with scopes of a few days to a few months can be of interest to developers, but there is no current platform to recruit developer skills on a much shorter time basis (i.e. 10 minutes to a few hours). In similar gig economy industries, such as driving for Uber, more than half of drivers work between 1 and 15 hours a week. We wanted to provide a way for developers to earn money in the most flexible manner possible.
