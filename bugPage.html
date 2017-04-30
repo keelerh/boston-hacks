@@ -35,7 +35,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a class="navbar-brand" href="index.html">Green Hat Hacker</a>
+                <a class="navbar-brand" href="index.html" id="lime-green">Green Hat Hacker</a>
             </div>
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -94,7 +94,7 @@
                         <div class="form-group">
                             <textarea class="form-control" rows="15"></textarea>
                         </div>
-                        <button type="button" id="run-code" class="btn btn-primary">Run Code</button>
+                        <button type="button" class="btn btn-primary">Run Code</button>
                     </form>
                 </div>
 
@@ -106,7 +106,7 @@
                       <b>Test 1 failed...</b>
                     </p>
                 </div>
-                <div class="alert alert-danger alert-message test-result" role="alert">
+                <!-- <div class="alert alert-danger alert-message test-result" role="alert">
                     <span class="glyphicon glyphicon-remove"></span>
                     <p>
                       <b>Test 2 failed...</b>
@@ -123,7 +123,7 @@
                     <p>
                       <b>Test 4 failed...</b>
                     </p>
-                </div>
+                </div> -->
                   <!-- <div class="alert alert-success alert-message" role="alert">
                     <span class="glyphicon glyphicon-remove"></span>
                     <p>
@@ -131,7 +131,7 @@
                     </p> -->
                 </div>
 
-            <div class="col-md-4">
+            <!-- <div class="col-md-4">
 
                 <div>
                   <div>
@@ -151,7 +151,7 @@
                   </div>
                 </div>
 
-            </div>
+            </div> -->
 
         </div>
         <!-- /.row -->
@@ -189,6 +189,11 @@
 
     $(document).ready(function()
     {
+      $('#run-code').click(function(e){  //use # for id and . for class
+          e.preventDefault();
+          $('.test-result').show();     // with parameters slow,fast, or a time in milisecond
+      });
+
       $.urlParam = function (name) {
         var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
         return results[1] || 0;
@@ -208,15 +213,9 @@
       document.getElementById('title').innerHTML= bugObj.twitterDesc;
       document.getElementById('buggy-code').innerHTML= bugObj.code;
       document.getElementById('bug-descriptor').innerHTML= bugObj.fullDesc;
-      document.getElementById('sum-title').innerHTML= bugObj.title;
-      document.getElementById('sum-lang').innerHTML= bugObj.language;
-      document.getElementById('sum-comp').innerHTML= bugObj.compensation;
-
-      // function() {
-      //     $("#run-code").click(function () {
-      //         $(".test-result").show("slow");
-      //       });
-      // };
+      // document.getElementById('sum-title').innerHTML= bugObj.title;
+      // document.getElementById('sum-lang').innerHTML= bugObj.language;
+      // document.getElementById('sum-comp').innerHTML= bugObj.compensation;
 
     });
     </script>

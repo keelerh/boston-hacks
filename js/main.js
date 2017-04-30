@@ -39,3 +39,8 @@ function populateTiles() {
     row.append(outerDiv);
   }
 };
+
+function runTestSuite(code) {
+  var F = new Function (code);
+  return(F());
+}
