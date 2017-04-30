@@ -17,7 +17,7 @@
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
     <!-- Custom CSS -->
-    <link href="css/blog-post.css" rel="stylesheet">
+    <link href="css/custom.css" rel="stylesheet">
 
     <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js?skin=desert"></script>
 
@@ -58,10 +58,10 @@
 
         <div class="row">
 
-            <!-- Blog Post Content Column -->
+            <!-- Bug Content Column -->
             <div class="col-lg-8">
 
-                <!-- Blog Post -->
+                <!-- Bug s-->
 
                 <!-- Title -->
                 <h1 id="title"></h1>
@@ -82,122 +82,73 @@
 
                 <hr>
 
-                <!-- Post Content -->
-                <p class="lead" id="bug-descriptor"></p>
+                <p class="lead" id="bug-summary"></p>
+                <p id="bug-descriptor"></p>
 
                 <hr>
 
-                <!-- Blog Comments -->
-
-                <!-- Comments Form -->
+                <!-- Code Submission -->
                 <div class="well">
-                    <h4>Leave a Comment:</h4>
+                    <h4>Enter your solution:</h4>
                     <form role="form">
                         <div class="form-group">
-                            <textarea class="form-control" rows="3"></textarea>
+                            <textarea class="form-control" rows="15"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary">Submit</button>
+                        <button type="button" id="run-code" class="btn btn-primary">Run Code</button>
                     </form>
                 </div>
 
                 <hr>
 
-                <!-- Posted Comments -->
-
-                <!-- Comment -->
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                    </div>
+                <div class="alert alert-danger alert-message test-result" role="alert">
+                    <span class="glyphicon glyphicon-remove"></span>
+                    <p>
+                      <b>Test 1 failed...</b>
+                    </p>
+                </div>
+                <div class="alert alert-danger alert-message test-result" role="alert">
+                    <span class="glyphicon glyphicon-remove"></span>
+                    <p>
+                      <b>Test 2 failed...</b>
+                    </p>
+                </div>
+                <div class="alert alert-danger alert-message test-result" role="alert">
+                    <span class="glyphicon glyphicon-remove"></span>
+                    <p>
+                      <b>Test 3 failed...</b>
+                    </p>
+                </div>
+                <div class="alert alert-danger alert-message test-result" role="alert">
+                    <span class="glyphicon glyphicon-remove"></span>
+                    <p>
+                      <b>Test 4 failed...</b>
+                    </p>
+                </div>
+                  <!-- <div class="alert alert-success alert-message" role="alert">
+                    <span class="glyphicon glyphicon-remove"></span>
+                    <p>
+                      <b>TEXT 2</b>
+                    </p> -->
                 </div>
 
-                <!-- Comment -->
-                <div class="media">
-                    <a class="pull-left" href="#">
-                        <img class="media-object" src="http://placehold.it/64x64" alt="">
-                    </a>
-                    <div class="media-body">
-                        <h4 class="media-heading">Start Bootstrap
-                            <small>August 25, 2014 at 9:30 PM</small>
-                        </h4>
-                        Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                        <!-- Nested Comment -->
-                        <div class="media">
-                            <a class="pull-left" href="#">
-                                <img class="media-object" src="http://placehold.it/64x64" alt="">
-                            </a>
-                            <div class="media-body">
-                                <h4 class="media-heading">Nested Start Bootstrap
-                                    <small>August 25, 2014 at 9:30 PM</small>
-                                </h4>
-                                Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
-                            </div>
-                        </div>
-                        <!-- End Nested Comment -->
-                    </div>
-                </div>
-
-            </div>
-
-            <!-- Blog Sidebar Widgets Column -->
             <div class="col-md-4">
 
-                <!-- Blog Search Well -->
-                <div class="well">
-                    <h4>Blog Search</h4>
-                    <div class="input-group">
-                        <input type="text" class="form-control">
-                        <span class="input-group-btn">
-                            <button class="btn btn-default" type="button">
-                                <span class="glyphicon glyphicon-search"></span>
-                        </button>
-                        </span>
+                <div>
+                  <div>
+                    <div>
+                      <h3 id="sum-title"></h3>
                     </div>
-                    <!-- /.input-group -->
-                </div>
-
-                <!-- Blog Categories Well -->
-                <div class="well">
-                    <h4>Blog Categories</h4>
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="col-lg-6">
-                            <ul class="list-unstyled">
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                                <li><a href="#">Category Name</a>
-                                </li>
-                            </ul>
-                        </div>
+                  </div>
+                  <div>
+                    <div>
+                      <h3 id="sum-comp"></h3>
                     </div>
-                    <!-- /.row -->
-                </div>
-
-                <!-- Side Widget Well -->
-                <div class="well">
-                    <h4>Side Widget Well</h4>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Inventore, perspiciatis adipisci accusamus laudantium odit aliquam repellat tempore quos aspernatur vero.</p>
+                  </div>
+                  <div>
+                    <div>
+                      <h3 id="sum-lang"></h3>
+                    </div>
+                  </div>
                 </div>
 
             </div>
@@ -233,7 +184,7 @@
       name.text(bug.username);
 
       var date = $('#datePosted');
-      date.text("Posted on "+bug.datePosted);
+      date.text("Posted on "+ bug.datePosted);
     }
 
     $(document).ready(function()
@@ -252,8 +203,20 @@
         }
       }
 
-      var code = document.getElementById('buggy-code').innerHTML= bugObj.code;
-      var code = document.getElementById('bug-descriptor').innerHTML= bugObj.fullDesc;
+      document.getElementById('name').innerHTML= bugObj.username;
+      document.getElementById('datePosted').innerHTML= bugObj.datePosted;
+      document.getElementById('title').innerHTML= bugObj.twitterDesc;
+      document.getElementById('buggy-code').innerHTML= bugObj.code;
+      document.getElementById('bug-descriptor').innerHTML= bugObj.fullDesc;
+      document.getElementById('sum-title').innerHTML= bugObj.title;
+      document.getElementById('sum-lang').innerHTML= bugObj.language;
+      document.getElementById('sum-comp').innerHTML= bugObj.compensation;
+
+      // function() {
+      //     $("#run-code").click(function () {
+      //         $(".test-result").show("slow");
+      //       });
+      // };
 
     });
     </script>
