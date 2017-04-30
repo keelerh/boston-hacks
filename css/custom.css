@@ -9,6 +9,9 @@
   background-color: #434371;
   border: #484041;
 }
+.test-result {
+  display: none;
+}
 #code-thumbnail{
   max-width: 800;
   max-height: 500;

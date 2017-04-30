@@ -94,41 +94,41 @@
                         <div class="form-group">
                             <textarea class="form-control" rows="15"></textarea>
                         </div>
-                        <button type="button" class="btn btn-primary">Run Code</button>
+                        <button type='button' class="btn btn-primary" id="run-code">Run Code</button>
                     </form>
                 </div>
 
                 <hr>
 
-                <div class="alert alert-danger alert-message test-result" role="alert">
+                <div class="alert alert-success alert-message test-result" role="alert">
                     <span class="glyphicon glyphicon-remove"></span>
                     <p>
-                      <b>Test 1 failed...</b>
+                      <b>Test 1 succeeded...</b>
                     </p>
                 </div>
-                <!-- <div class="alert alert-danger alert-message test-result" role="alert">
+                <div class="alert alert-success alert-message test-result" role="alert">
                     <span class="glyphicon glyphicon-remove"></span>
                     <p>
-                      <b>Test 2 failed...</b>
+                      <b>Test 2 succeeded..</b>
                     </p>
                 </div>
-                <div class="alert alert-danger alert-message test-result" role="alert">
+                <div class="alert alert-success alert-message test-result" role="alert">
                     <span class="glyphicon glyphicon-remove"></span>
                     <p>
-                      <b>Test 3 failed...</b>
+                      <b>Test 3 succeeded...</b>
                     </p>
                 </div>
-                <div class="alert alert-danger alert-message test-result" role="alert">
+                <div class="alert alert-success alert-message test-result" role="alert">
                     <span class="glyphicon glyphicon-remove"></span>
                     <p>
-                      <b>Test 4 failed...</b>
+                      <b>Test 4 succeeded...</b>
                     </p>
-                </div> -->
+                </div>
                   <!-- <div class="alert alert-success alert-message" role="alert">
                     <span class="glyphicon glyphicon-remove"></span>
                     <p>
                       <b>TEXT 2</b>
-                    </p> -->
+                    </p>
                 </div>
 
             <!-- <div class="col-md-4">
@@ -189,8 +189,7 @@
 
     $(document).ready(function()
     {
-      $('#run-code').click(function(e){  //use # for id and . for class
-          e.preventDefault();
+      $('#run-code').click(function(){  //use # for id and . for class
           $('.test-result').show();     // with parameters slow,fast, or a time in milisecond
       });
 
