@@ -94,7 +94,7 @@
                         <div class="form-group">
                             <textarea class="form-control" rows="15"></textarea>
                         </div>
-                        <button type="button" id="run-code" class="btn btn-primary">Run Code</button>
+                        <button type="submit" class="btn btn-primary">Run Code</button>
                     </form>
                 </div>
 
@@ -189,6 +189,11 @@
 
     $(document).ready(function()
     {
+      $('#run-code').click(function(e){  //use # for id and . for class
+          e.preventDefault();
+          $('.test-result').show();     // with parameters slow,fast, or a time in milisecond
+      });
+
       $.urlParam = function (name) {
         var results = new RegExp('[\?&]' + name + '=([^&#]*)').exec(window.location.href);
         return results[1] || 0;
@@ -211,12 +216,6 @@
       document.getElementById('sum-title').innerHTML= bugObj.title;
       document.getElementById('sum-lang').innerHTML= bugObj.language;
       document.getElementById('sum-comp').innerHTML= bugObj.compensation;
-
-      // function() {
-      //     $("#run-code").click(function () {
-      //         $(".test-result").show("slow");
-      //       });
-      // };
 
     });
     </script>
