@@ -1,8 +1,15 @@
 .active {
-  background: linear-gradient(to bottom, #3cb0fd, #3498db);
-  text-decoration: none;
+  background-color: #484041;
 }
 .spacer {
   clear: both;
   height: 20px;
+}
+.btn {
+  background-color: #434371;
+  border: #484041;
+}
+#code-thumbnail{
+  max-width: 800;
+  max-height: 500;
 }

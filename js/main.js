@@ -22,7 +22,8 @@ function populateTiles() {
     var bug = bugs[i];
     var outerDiv = $('<div>', {"class":"col-md-3 col-sm-6 hero-feature " + bug.language});
     var thumbnail = $('<div>', {"class": "thumbnail"});
-    var img = $('<img>', {"src": "http://placehold.it/800x500"});
+    // var img = $('<img>', {"src": "http://placehold.it/800x500"});
+    var img = $('<pre class="prettyprint" id="code-thumbnail" style="max-height:200px; max-width:350px">' + bug.code + '</pre>');
     thumbnail.append(img);
     var caption = $('<div>', {"class":"caption"});
     var title = $('<h3>', {"margin-bottom": "10px"}).text(bug.title);
